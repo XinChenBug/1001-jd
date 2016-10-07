@@ -48,6 +48,7 @@ $(function()
     $circleLi.mouseover(function()
     {
         indexIMG=$circleLi.index(this); //当前LI索引值
+       $(this).addClass("red-back").siblings().removeClass("red-back");
         showImg(indexIMG);
     }).eq(0).mouseover();
 
@@ -64,6 +65,8 @@ $(function()
         adTimer=setInterval(function()
         {
             showImg(indexIMG);
+            var $circleThis= $circleLi.eq( indexIMG);
+           $circleThis.addClass("red-back").siblings().removeClass("red-back");
             indexIMG++;
             if( indexIMG==imgLen)
                 indexIMG=0;

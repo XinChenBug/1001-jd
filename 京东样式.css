@@ -301,8 +301,11 @@ li{
     color: #ffffff;
     font-size: 14px;
     font-weight: 400;
-    padding-top: 12px;
+    /*padding-top: 12px;*/
+    margin: 10px 0px;
     text-indent: 10px;
+    height: 20px;
+    line-height: 20px;
 
 }
 
@@ -431,7 +434,7 @@ li{
     left: 400px;
 
 }
-#main-mid .big-logo .circle li
+#main-mid .big-logo .circle li.before
 {
     width:15px;
     height:15px;
@@ -1031,17 +1034,20 @@ line-height: 62px;
 {
     background: white;
     width: 212px;
-    position: absolute;
-    z-index: 101;
+    /*position: absolute;*/
+    /*left: 0px;*/
+    /*z-index: 2;*/
     border-left: 1px solid  red;
 }
 
-.red-font-a{
- background: blue;
+#main-mid .list  a.red-font-a{
     color: red;
 }
 
-
+#main-mid .big-logo .circle li.red-back
+{
+    background: red;
+}
 
 
 
