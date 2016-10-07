@@ -68,18 +68,12 @@ li{
     background: red;
 }
 
-
-
-
-
 #top .top-main  .top-right
 {
     float:right;
     height: 30px;
     line-height: 30px;
-
 }
-
 
 #top .top-main  .top-right li
 {
@@ -409,7 +403,6 @@ li{
 }
 
 
-
 #main-mid .big-logo
 {
     width:730px;
@@ -417,7 +410,19 @@ li{
     float: left;
     margin: 12px 0px 0px 9px;
     position: relative;
+    cursor: pointer;
 }
+
+#main-mid .big-logo img
+{
+    display: none;
+    /*position: absolute;
+    top: 0px;
+    left: 0px;
+    */
+
+}
+
 
 #main-mid .big-logo .circle
 {
@@ -437,11 +442,36 @@ li{
     margin-right: 5px;
     border-radius: 50%;
     color: white;
+}
+
+#main-mid .big-logo .button-union
+{
+width: 27px;
+height: 62px ;
+background:#a4b2bf;
+text-align: center;
+line-height: 62px;
+    color: white;
+    opacity: 0.5;
+    font-size: 20px;
+    display: none;
 
 }
 
+#main-mid .big-logo .left-button
+{
+    position: absolute;
+    top: 190px;
 
+}
 
+#main-mid .big-logo .right-button
+{
+    position: absolute;
+    top: 190px;
+    right: 0px;
+    z-index: 2;
+}
 
 #main-mid .news
 {
