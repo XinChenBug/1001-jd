@@ -282,7 +282,6 @@ li{
     margin: 0px auto;
 
     /*为了二级菜单 定位*/
-
     position: relative;
 
 }
@@ -296,13 +295,19 @@ li{
     float: left;
 }
 
+#main-mid .list ul div
+{
+    height: 30px;
+    width: 210px;
+    border: 1px green solid;
+}
+
 #main-mid .list li
 {
     color: #ffffff;
     font-size: 14px;
     font-weight: 400;
-    /*padding-top: 12px;*/
-    margin: 10px 0px;
+    padding: 5px 0px;
     text-indent: 10px;
     height: 20px;
     line-height: 20px;
@@ -1034,11 +1039,14 @@ line-height: 62px;
 {
     background: white;
     width: 212px;
-    /*position: absolute;*/
-    /*left: 0px;*/
-    /*z-index: 2;*/
     border-left: 1px solid  red;
+    position: absolute;
+    left: 0px;
+    z-index: 102;
 }
+
+
+
 
 #main-mid .list  a.red-font-a{
     color: red;

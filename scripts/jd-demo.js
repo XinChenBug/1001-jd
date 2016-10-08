@@ -5,13 +5,14 @@
 $(function()
 {
 //商品分类 悬浮函数
-    var $kindLi=$("#main-mid>.list>ul>li");
+    var $kindLi=$("#main-mid>.list>ul li");
     var $kindLevel2=$("#main-mid>.level2");
     $kindLi.hover(function()
     {
         var indexLi=$kindLi.index(this);
         $kindLevel2.eq(indexLi).show();
         $(this).addClass("white-back");
+        //$(this).siblings().addClass("level2-posi");
         $(this).children("a").addClass("red-font-a").attr("color","red");
     },function()
     {
