@@ -38,17 +38,25 @@ $(function()
     var imgLen=$circleLi.length;
     var adTimer=null;
 
+ //  2.0 立即刷新出第一张照片  若无该函数，则需要等待一定时间才可刷出第一张照片
+
+    $circleLi.mouseover(function()
+    {
+        indexIMG=$circleLi.index(this); //当前LI索引值
+        showImg(indexIMG);
+        test=1;
+    }).eq(0).mouseover();
+
     //2.1  图片手动切换和自动轮播
     $circleLi.hover(function()
     {
         if(adTimer)
         {
             clearInterval(adTimer);
-            indexIMG=$circleLi.index(this); //当前LI索引值
-           // $(this).addClass("red-back").siblings().removeClass("red-back");
-            showImg(indexIMG);
-            test=1;
         }
+        indexIMG=$circleLi.index(this); //当前LI索引值
+        showImg(indexIMG);
+        test=1;
     },function()
     {
         autoPlay();
@@ -185,9 +193,31 @@ $(function()
         $toplink.eq(index0fliDown).hide();
 
     })
+//五、天天特价 自动滚动
 
+    var $showUL=$("#dayP .dayP-right .run-ul");
+    var $showLI=$("#dayP .dayP-right .run-ul .distance");
+    var time=null;
+    var currentLength=$showUL.position().top;
+    $("#dayP .dayP-right").hover(function()
+    {
+       clearInterval(time);
+    },function()
+    {
+        time=setInterval(function(){messagesShow();},3000);
+    }).eq(0).trigger("mouseleave");
 
+    function  messagesShow()
+    {
+       if (currentLength==-140)
+       {
+           $showUL.css("top","-560px");
+           //此处宜直接使用参数，不宜再使用动画进行设置
+       }
+        $showUL.stop(true,true).animate({top:"+=140px"},1000,function (){currentLength=$showUL.position().top});
+        //注意 currentLength=$showUL.position().top 需要写在回调函数里，否则会比动画先执行
 
+    }
 
 
 })

@@ -1182,19 +1182,29 @@ li{
 
 
 #dayP .dayP-right .run-box
+ {
+     width: 260px;
+     height: 280px;
+     margin: 0 auto;
+     overflow: hidden;
+    position: relative;
+ }
+
+#dayP .dayP-right .run-ul
 {
     width: 260px;
-    height: 260px;
-    margin: 40px auto;
-    overflow: hidden;
+    margin: 0px auto;
+    position: absolute;
+    top: -560px;
+
 }
+
 
 #dayP .dayP-right .run-box .distance
 {
-    margin: 10px 0px;
+    padding: 20px 0px;
     width: 260px;
     height: 100px;
-
 }
 
 
@@ -1218,6 +1228,12 @@ li{
     width: 160px;
     height: 45px;
 }
+#dayP .dayP-right .run-box .run-text .run-name img
+{
+   border-radius: 50%;
+}
+
+
 
 #dayP .dayP-right .run-box .run-text .run-mess
 {
@@ -1225,6 +1241,10 @@ li{
     height: 55px;
     background: #f8f8f8;
 }
+
+
+
+
 
 
 /*天天低价 结束*/
