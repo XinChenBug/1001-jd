@@ -18,14 +18,14 @@ $(function()
         $kindLevel2.hide();
         $(this).removeClass("white-back");
         $(this).children("a").removeClass("red-font-a");
-    })
+    });
 
     //商品分类悬浮函数 结束
     $kindLevel2.hover(function(){
         $(this).show();
     },function(){
         $(this).hide();
-    })
+    });
 
 
 //二、 大图片切换函数
@@ -75,7 +75,7 @@ $(function()
     {
         $bigButtons.hide();
         autoPlay();
-    })
+    });
 
 
     // 2.3 按钮点击  手动切换图片
@@ -107,7 +107,7 @@ $(function()
         }
         showImg(indexIMG);
         $bigButtons.show();
-    })
+    });
 
 
 //   2.4 大图区域所调用的子函数
@@ -174,7 +174,7 @@ $(function()
             }
         }
         $pic4gr.eq(indexOfGR).show().siblings().not("button").hide();
-    })
+    });
 
 
 //  四、顶部  我的京东/手机京东等下拉菜单
@@ -192,9 +192,8 @@ $(function()
         $(this).find(".dd-text").removeClass("dd-text-add");
         $toplink.eq(index0fliDown).hide();
 
-    })
+    });
 //五、天天特价 自动滚动
-
     var $showUL=$("#dayP .dayP-right .run-ul");
     var $showLI=$("#dayP .dayP-right .run-ul .distance");
     var time=null;
@@ -216,8 +215,27 @@ $(function()
        }
         $showUL.stop(true,true).animate({top:"+=140px"},1000,function (){currentLength=$showUL.position().top});
         //注意 currentLength=$showUL.position().top 需要写在回调函数里，否则会比动画先执行
-
     }
 
 
-})
+    // 六、通过ajax 动态获取留言
+    var $commentShow=$("#dayP .dayP-right .run-ul .distance .run-mess a");
+    var pepleNum=$commentShow.length;
+    var i=0;
+    $.post("messages.html",function(data,textStatus)
+    {
+        var $text=$(data).find("p");
+        for(i=0;i<pepleNum;i++)
+        {
+            $commentShow.eq(i).text($text.eq(i).text());
+        }
+
+    })
+
+
+
+
+
+////
+
+    })
