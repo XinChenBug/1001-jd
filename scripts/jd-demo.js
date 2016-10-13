@@ -1,6 +1,3 @@
-/**
- * Created by chenxin on 16/10/6.
- */
 
 $(function()
 {
@@ -26,7 +23,6 @@ $(function()
     },function(){
         $(this).hide();
     });
-
 
 //二、 大图片切换函数
 
@@ -229,10 +225,27 @@ $(function()
         {
             $commentShow.eq(i).text($text.eq(i).text());
         }
-
     })
 
-
+////七、送货地址 函数
+    var $address=$("#top .top-main .top-left");
+    var $moreAddress=$("#top .top-main .top-left .pull");
+    var $allAddress=$("#top .top-main .top-left .pull a");
+    $address.hover(function()
+    {
+             $moreAddress.show();
+             $(this).find("p").addClass("add-p");
+        $allAddress.click(function()
+        {
+            var addressText=$(this).text();
+            $address.find("span").text(addressText);
+            return false;
+        });
+    },function()
+    {
+        $moreAddress.hide();
+        $(this).find("p").removeClass("add-p");
+    });
 
 
 

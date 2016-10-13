@@ -1,14 +1,13 @@
 *
 {
-margin: 0;
+    margin: 0;
     padding: 0;
 }
 
 body
 {
-    font:12px/150% Arial,Verdana,"\5b8b\4f53";
+    font:12px/150% Arial,Verdana;
     color: #666;
-
 }
 
 a{
@@ -18,15 +17,13 @@ a{
 
 li{
     list-style: none;
-
 }
 
 .red-font
 {
     color: #c81623;
 }
-
-
+/*顶部 配送、 登录区 开始*/
 #top
 {
     width:100%;
@@ -41,29 +38,53 @@ li{
     background: #f1f1f1;
 }
 
-#top .top-main  .top-left
+#top .top-main  .top-left     /*顶部左侧 配送地址*/
 {
-    width:93px;
     line-height: 30px;
-    text-align: center;
     float: left;
+    position: relative;
+
 }
 
 #top .top-main  .top-left p
 {
     float: left;
     padding-left: 10px;
+    width:90px
 }
 
-#top .top-main  .top-left .pull
+#top .top-main  .top-left .add-p   /*顶部左侧 配送地址悬浮时  JS新增样式*/
 {
-
-   float: left;
-    width: 15px;
-    height: 15px;
-    background: red;
+    background: white;
+    height: 31px;
+    line-height: 31px;
+    z-index: 21;
+    position: relative;
+    border-left:1px solid #ddd ;
+    border-right:1px solid #ddd;
 }
 
+#top .top-main  .top-left .pull   /*顶部左侧 配送地址下拉显示区域*/
+{
+    position: absolute;
+    top:30px;
+    left:0px;
+    width: 200px;
+    height: 150px;
+    background: white;
+    border: 1px solid #ddd;
+    z-index: 20;
+    display: none;
+}
+#top .top-main  .top-left .address
+{
+    float: left;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+
+/*顶部右侧  开始*/
 #top .top-main  .top-right
 {
     float:right;
@@ -72,33 +93,12 @@ li{
     position: relative;
 }
 
-/*
-#top .top-main  .top-right .title-service  .li-frame
-{
-    float:left;
-    height: 30px;
-    line-height: 30px;
-    position: relative;
-}
-
-#top .top-main  .top-right  .title-service .li-frame2
-{
-    height: 12px;
-    padding: 0px;
-    width: 1px;
-    background: #dddddd;
-    margin-top: 9px;
-    float: left;
-}
-
-*/
 #top .top-main  .top-right .title-service>li
 {
 
     float:left;
     height: 30px;
     line-height: 30px;
-    /*padding: 0 8px;*/
     margin: 0px  auto;
 }
 #top .top-main  .top-right .title-service li.detail-down
@@ -220,8 +220,6 @@ li{
     left:0px;
 }
     /*客户服务  样式结束  */
-
-
 
 /* 网站导航  样式开始 */
 #webGuid{
@@ -638,7 +636,7 @@ li{
 
 #main-mid .news .news-up
 {
-    width:248px;
+    width:250px;
     height: 164px;
     border-bottom: 1px solid #e4e4e4;
 }
@@ -646,7 +644,7 @@ li{
 
 #main-mid .news .news-up h3
 {
-    width:248px;
+    width:250px;
     height: 32px;
     line-height: 32px;
     border-bottom: 1px dotted #e4e4e4;
@@ -669,13 +667,24 @@ li{
     height: 214px;
 }
 
+#main-mid .news .news-mid .group
+{
+    width: 250px;
+    height: 70px;
+    border-bottom: 1px solid #e4e4e4;
+}
+
 #main-mid .news .news-mid li
 {
-    width: 60px;
+    width: 61px;
     height: 70px;
-    border: 1px solid #e4e4e4;
+    border-right: 1px solid #e4e4e4;
     float: left;
     position: relative;
+}
+#main-mid .news .news-mid .no-right
+{
+    border-right: none;
 }
 
 #main-mid .news .news-mid  li div
@@ -693,14 +702,6 @@ li{
     top :50px;
     left:15px;
 }
-
-#main-mid .news .news-mid .no-top-line
-{
-    border-top:none;
-    border-left:none;
-    border-bottom:none;
-}
-
 
 
 #main-mid .news .news-mid  li .money
@@ -819,9 +820,7 @@ li{
     right: 0px;
 }
 
-
-
-
+/*猜你喜欢  CSS样式开始*/
 #love
 {
     width: 1210px;
@@ -868,21 +867,22 @@ li{
     height: 30px;
     line-height: 30px;
     float: right;
-    /*background: pink;*/
     background: url("img/猜你喜欢.png") no-repeat -300px 1px;
 }
 
  #guess-line
 {
     width: 1210px;
-    height: 6px;
-    background: green;
+    height: 1px;
+    background:#ededed;
     clear: both;
-    /*background: url("img/猜你喜欢.png") repeat-x 0px -124px;*/
 }
 
-
-
+ #love h3 a
+ {
+     color: #b51d1a;
+ }
+/*猜你喜欢  CSS样式结束*/
 #love-pic
 {
     width: 1210px;
